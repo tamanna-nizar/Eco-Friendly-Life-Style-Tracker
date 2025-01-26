@@ -1,0 +1,91 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .dashboard-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: #2c3e50;
+  }
+  
+  button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .action-item {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .action-item h3 {
+    font-size: 1.2em;
+    color: #16a085;
+  }
+  
+  .suggestions ul {
+    list-style-type: none;
+  }
+  
+  .suggestions li {
+    background-color: #f9e4d4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  

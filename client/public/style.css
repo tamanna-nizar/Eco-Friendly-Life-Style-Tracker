@@ -1,0 +1,98 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #e8f5e9; /* Light green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .login-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    color: #2e7d32; /* Dark green */
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    border-color: #2e7d32;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #43a047; /* Green button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #2e7d32;
+  }
+  
+  .additional-links {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  a {
+    color: #43a047;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

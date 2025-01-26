@@ -1,0 +1,64 @@
+holder="Enter your monthly energy consumption (kWh)" required>
+      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Friendly Lifestyle Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Track Your Eco-Friendly Lifestyle</h1>
+    <form id="eco-lifestyle-form">
+      <div class="form-group">
+        <label for="travel">Monthly Travel Distance (km):</label>
+        <input type="number" id="travel" name="travel" placeholder="Enter your monthly travel distance (km)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="energy">Monthly Energy Consumption (kWh):</label>
+        <input type="number" id="energy" name="energy" place
+      <div class="form-group">
+        <label for="water">Monthly Water Consumption (liters):</label>
+        <input type="number" id="water" name="water" placeholder="Enter your monthly water consumption (liters)" required>
+      </div>
+
+      <button type="submit">Calculate Carbon Footprint</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('eco-lifestyle-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent default form submission
+
+      const travel = document.getElementById('travel').value;
+      const energy = document.getElementById('energy').value;
+      const water = document.getElementById('water').value;
+
+      // Carbon Footprint Calculation (example estimates)
+      const travelCarbon = travel * 0.2; // Assuming 0.2 kg CO2 per km
+      const energyCarbon = energy * 0.9; // Assuming 0.9 kg CO2 per kWh
+      const waterCarbon = water * 0.05; // Assuming 0.05 kg CO2 per liter
+
+      const totalCarbon = travelCarbon + energyCarbon + waterCarbon;
+
+      // Display Result
+      document.getElementById('result').innerHTML = `
+        <h2>Your Estimated Monthly Carbon Footprint</h2>
+        <p>Travel: ${travelCarbon.toFixed(2)} kg CO2</p>
+        <p>Energy: ${energyCarbon.toFixed(2)} kg CO2</p>
+        <p>Water: ${waterCarbon.toFixed(2)} kg CO2</p>
+        <p><strong>Total Carbon Footprint: ${totalCarbon.toFixed(2)} kg CO2</strong></p>
+      `;
+    });
+  </script>
+
+</body>
+</html>

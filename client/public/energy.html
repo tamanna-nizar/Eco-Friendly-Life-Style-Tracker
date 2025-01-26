@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Friendly Lifestyle Tracker</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="energy.css">
+</head>
+<body>
+
+  <!-- Container for the Log Action Section -->
+  <div class="log-action">
+    <h2>Log Your Eco-Friendly Action</h2>
+    <form id="eco-action-form">
+      <div class="form-group">
+        <label for="action">Action:</label>
+        <select id="action" name="action" required>
+          <option value="recycling">Recycling</option>
+          <option value="composting">Composting</option>
+          <option value="using_public_transport">Using Public Transport</option>
+          <option value="energy_saving">Energy Saving</option>
+          <option value="water_conservation">Water Conservation</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" placeholder="Describe your eco-friendly action" required></textarea>
+      </div>
+
+      <button type="submit">Log Action</button>
+    </form>
+  </div>
+
+  <!-- Script to handle the form submission -->
+  <script>
+    const form = document.getElementById('eco-action-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent default form submission
+
+      const action = document.getElementById('action').value;
+      const description = document.getElementById('description').value;
+
+      try {
+        const response = await fetch('http://localhost:5000/api/eco-action', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ action, description }),
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          alert('Eco-friendly action logged successfully!');
+        } else {
+          alert(data.message || 'Failed to log action.');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('An error occurred while logging the action.');
+      }
+    });
+  </script>
+
+</body>
+</html>

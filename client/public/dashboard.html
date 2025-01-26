@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Eco-Friendly Lifestyle Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <h1>Welcome to Your Eco-Friendly Dashboard</h1>
+      <button id="logout-btn">Logout</button>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="calc.html">Calculate Carbon Footprint</a></li>
+        <li><a href="energy.html">Energy Consumption</a></li>
+      </ul>
+    </nav>
+
+    <section class="eco-actions">
+      <h2>Your Eco-Friendly Actions</h2>
+      <div class="actions">
+        <div class="action-item">
+          <h3>Reduce Plastic Usage</h3>
+          <p>You've reduced plastic usage by 50% this week!</p>
+        </div>
+        <div class="action-item">
+          <h3>Energy Conservation</h3>
+          <p>You've saved 10 kWh of energy this week.</p>
+        </div>
+        <!-- Add more action items as needed -->
+      </div>
+    </section>
+
+    <section class="suggestions">
+      <h2>Eco-Friendly Suggestions</h2>
+      <ul>
+        <li>Try using reusable shopping bags.</li>
+        <li>Switch to energy-efficient appliances.</li>
+        <!-- Add more suggestions -->
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    // Log the user out by removing the token and redirecting
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      localStorage.removeItem('token');
+      window.location.href = 'index.html'; // Redirect to login page
+    });
+  </script>
+</body>
+</html>

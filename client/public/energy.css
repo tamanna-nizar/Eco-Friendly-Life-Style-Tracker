@@ -1,0 +1,81 @@
+/* Container for the Log Action section */
+.log-action {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .log-action h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  label {
+    font-size: 1.2em;
+    color: #34495e;
+  }
+  
+  select, textarea {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  select:focus, textarea:focus {
+    border-color: #16a085;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #16a085;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0bddb3;
+  }
+  
+  button:active {
+    background-color: #16a085;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .log-action {
+      padding: 20px;
+    }
+  
+    form {
+      gap: 15px;
+    }
+  
+    button {
+      font-size: 1.1em;
+      padding: 12px;
+    }
+  }
+  
